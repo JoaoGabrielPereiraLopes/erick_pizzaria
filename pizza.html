@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function pegador(){
+    body=document.getElementById('body_gostoso')
+    var produto={'valor':Number(document.getElementById('valor').value),'gasto':Number((document.getElementById('gasto').value)),'quantidade':Number((document.getElementById('quantidade').value))}
+    lucro=(produto['valor']-produto['gasto'])*produto['quantidade']
+    gasto=produto['gasto']*produto['quantidade']
+    body.innerHTML='lucro foi '+lucro+'<br>gasto foi '+gasto
+}
     </script>
 </head>
 <body id="body_gostoso">
-    <input type="number" id="valor" placeholder="informe o valor">
-    <input type="number" id="gasto" placeholder="informe o gasto">
-    <input type="number" id="quantidade" placeholder="informe a quantidade">
-    <button onclick="pegador()">registrar</button>
+    <div id="formulario">
+        <input type="number" id="valor" placeholder="informe o valor"><br>
+        <input type="number" id="gasto" placeholder="informe o gasto"><br>
+        <input type="number" id="quantidade" placeholder="informe a quantidade"><br>
+        <button onclick="pegador()">registrar</button>
+    </div>
 </body>
 </html>
